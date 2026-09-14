@@ -1,0 +1,50 @@
+name: release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the tag matches mod_version
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          declared=$(grep '^mod_version=' gradle.properties | cut -d= -f2)
+          if [ "$tag" != "$declared" ]; then
+            echo "Tag $GITHUB_REF_NAME says $tag but gradle.properties says $declared."
+            echo "Update mod_version, commit, then retag."
+            exit 1
+          fi
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 25
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - run: chmod +x gradlew
+
+      - run: ./gradlew build --no-daemon
+
+      - uses: Kir-Antipov/mc-publish@v3.3.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          modrinth-id: ${{ vars.MODRINTH_ID }}
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          files: build/libs/!(*-@(dev|sources|javadoc)).jar
+          name: Landgrab ${{ github.ref_name }}
+          version-type: release
+          loaders: fabric
+          game-versions: '26.2'
+          java: 25
+          changelog-file: CHANGELOG.md

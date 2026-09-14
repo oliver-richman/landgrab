@@ -1,0 +1,24 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "io.github.oliverrichman.landgrab.mixin",
+	"mixins": [
+		"PacketFilterMixin",
+		"PlayerAdvancementsMixin",
+		"PlayerChunkSenderMixin",
+		"SectionBlocksUpdateAccess",
+		"TrackedEntityMixin",
+		"ServerPlayerMixin"
+	],
+	"client": [
+		"client.AbstractContainerScreenMixin",
+		"client.AbstractRecipeBookScreenMixin",
+		"client.ContainerScreenAccess",
+		"client.GameTabMixin",
+		"client.InventoryScreenMixin",
+		"client.RecipeBookAccess"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

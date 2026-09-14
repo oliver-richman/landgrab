@@ -1,0 +1,56 @@
+{
+	"landgrab.create.enable": "Landgrab",
+	"landgrab.create.enable.tooltip": "Start in a single chunk and buy your way outward. Works with any world type.",
+	"gamerule.landgrab.landgrab": "Landgrab mode",
+
+	"key.landgrab.phone": "Open phone",
+
+	"block.landgrab.haze": "Haze",
+
+	"landgrab.phone.open": "Phone",
+	"landgrab.phone.app.map": "Map",
+	"landgrab.phone.app.trade": "Trade",
+	"landgrab.phone.app.messages": "Messages",
+
+	"landgrab.chunks": "%s chunks",
+	"landgrab.chunks_one": "1 chunk",
+	"landgrab.phone.next": "next %s",
+	"landgrab.phone.tip.owned": "Chunk %s, %s — yours",
+	"landgrab.phone.tip.for_sale": "Chunk %s, %s — %s",
+	"landgrab.phone.tip.locked": "Chunk %s, %s — does not touch your land",
+
+	"landgrab.phone.tray_empty": "Drop goods here to sell",
+	"landgrab.phone.tray_total": "Offer: %s",
+	"landgrab.phone.tip.take_back": "Click to take back",
+	"landgrab.phone.tip.sells_for": "%s sells for %s",
+	"landgrab.phone.tip.not_sellable": "%s — nobody will buy this",
+	"landgrab.phone.sell": "Sell",
+	"landgrab.phone.cancel": "Cancel",
+
+	"landgrab.phone.no_messages": "No messages",
+	"landgrab.phone.ago": "%s ago",
+
+	"landgrab.tooltip.value_stack": "%s (%s each)",
+
+	"landgrab.message.not_yours": "You do not own that chunk yet",
+	"landgrab.message.not_adjacent": "You can only buy land that touches your own",
+	"landgrab.message.cannot_afford": "That chunk costs %s, and you have %s",
+	"landgrab.message.no_offer_for": "Nobody wants %s",
+	"landgrab.message.bought": "Bought chunk %s, %s for %s",
+	"landgrab.message.sold": "Sold %s items for %s",
+	"landgrab.message.advancement": "%s earned you %s",
+	"landgrab.message.frontier_opened": "%s: you have landed in chunk %s, %s, and it is yours",
+	"landgrab.message.portal_blocked": "That portal comes out in %s at chunk %s, %s, which you do not own",
+
+	"landgrab.dimension.overworld": "The Overworld",
+	"landgrab.dimension.the_nether": "The Nether",
+	"landgrab.dimension.the_end": "The End",
+
+	"landgrab.command.inactive": "This is not a Landgrab world",
+	"landgrab.command.unopened": "%s has not been opened yet. Balance %s",
+	"landgrab.command.status": "%s: %s owned, %s, next chunk %s, started at %s, %s",
+	"landgrab.command.paid": "Added %s",
+	"landgrab.command.granted": "Granted chunk %s, %s in %s",
+
+	"death.attack.landgrab.boundary": "%1$s leaned too hard on the edge of the world"
+}

@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "landgrab",
+	"version": "${version}",
+	"name": "Landgrab",
+	"description": "A game mode that starts you in a single chunk. Sell what you gather to buy your way outward, one chunk at a time.",
+	"authors": [
+		"Oliver Richman"
+	],
+	"license": "MIT",
+	"icon": "assets/landgrab/icon.png",
+	"contact": {
+		"homepage": "https://modrinth.com/mod/landgrab",
+		"sources": "https://github.com/oliver-richman/landgrab",
+		"issues": "https://github.com/oliver-richman/landgrab/issues"
+	},
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.oliverrichman.landgrab.Landgrab"
+		],
+		"client": [
+			"io.github.oliverrichman.landgrab.client.LandgrabClient"
+		]
+	},
+	"mixins": [
+		"landgrab.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25"
+	}
+}
